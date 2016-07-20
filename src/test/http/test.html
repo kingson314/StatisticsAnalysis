@@ -1,0 +1,2639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>财经日历|财经月历|财经数据|经济指标数据-汇通网外汇门户</title>
+<meta content="财经日历，经济指标日历，财经大事预告，主要国家利率，债市期货行情" name="Keywords" />
+<meta content="汇通网外汇门户：提供财经日历，经济指标日历，财经大事预告，主要国家利率，债市期货行情，指标中心"
+	name="Description" />
+<link type="text/css" rel="Stylesheet" href="../css/cjrl.css" />
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+
+<script type="text/javascript" src="../My97DatePicker/WdatePicker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/Calendar.css" />
+
+<script type="text/javascript" src="../js/jquery-1.3.1.js"></script>
+
+<script type="text/javascript" language="javascript">
+	function serachData() {
+		var d = $("#txt_Date").val();
+		location.href = d.replace(/^\s+|\s+$/g, "").replace("-", "").replace(
+				"-", "")
+				+ ".shtml";
+	}
+</script>
+<script language="javascript" type="text/javascript">
+	var arr = new Array();
+	function checkCountry(ck) {
+		if (ck.checked == true) {
+			ck.checked = true;
+			$
+					.ajax({
+						type : "get",
+						cache : false,
+						url : "/indexs/" + ck.value + ".txt",
+						contentType : "application/x-www-form-urlencoded; charset=gb2312",
+						timeout : 10000,
+						error : function() {
+							alert('加载错误请稍后再试!');
+						},
+						success : function(msg) {
+							$("#div_currency").html(msg);
+						}
+					});
+		} else {
+			location.href = "index.shtml";
+		}
+	}
+</script>
+<script type="text/javascript">
+	function trBlock(imgid) {
+		var id = "#tr_popups" + imgid;
+		if ($(id).css("display") == "none") {
+			$(id).css("display", "block");
+			document.getElementById("tr_block" + imgid).src = "../images/sbt.jpg";
+		} else {
+			$(id).css("display", "none");
+			document.getElementById("tr_block" + imgid).src = "../images/Plus.jpg";
+		}
+	}
+</script>
+
+<script type="text/javascript" src="http://cbjs.baidu.com/js/m.js"></script>
+
+<script type="text/javascript">
+	BAIDU_CLB_preloadSlots("176834", "176835", "310302", "310303");
+</script>
+<script type="text/javascript">
+	BAIDU_CLB_fillSlot("517557");
+</script>
+</head>
+<body style="background-color: #f1f0f5; font-size: 12px">
+	<!-- Baidu Button BEGIN -->
+	<script type="text/javascript" id="bdshare_js"
+		data="type=slide&img=0&pos=right&uid=11824"></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript">
+		var bds_config = {
+			"bdTop" : 322
+		};
+		document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion="
+				+ new Date().getHours();
+	</script>
+	<!-- Baidu Button END -->
+	<script type="text/javascript">
+		BAIDU_CLB_fillSlot("403530");
+	</script>
+
+	<form id="form1">
+		<div class="bigdiv">
+			<div>
+				<style>
+body,dd,dl,dt,ul,li,p,div,img,span,h1,h2,h3,h4,h5,h6,h7 {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body {
+	font-family: 宋体;
+	font-size: 12px;
+	text-align: left;
+	line-height: 20px;
+	color: #333;
+	background-color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.bule12 {
+	color: #0761b7;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0761b7;
+	text-decoration: none;
+}
+
+a.Lred12B,a.Lred12B:link {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+a.Lred12B:hover,a.Lred12B:visited {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+a.Lblack12,a.Lblack12:link {
+	color: #333;
+	text-decoration: none;
+}
+
+a.Lblack12:hover,a.Lblack12:visited {
+	color: #4693de;
+	text-decoration: none;
+}
+
+a.Lbule12,a.Lbule12:link {
+	color: #0761b7;
+	text-decoration: none;
+}
+
+a.Lbule12:hover,a.Lbule12:visited {
+	color: #4693de;
+	text-decoration: none;
+}
+
+a.grey6,a.grey6:link,a.grey6:visited {
+	color: #666666;
+	text-decoration: none;
+}
+
+a.grey6:hover {
+	color: #0761b7;
+	text-decoration: none;
+}
+
+#head {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.headT {
+	background: url(http://res.hgold.com.cn/include/images/head01_bg.jpg)
+		repeat-x;
+	float: left;
+	height: 24px;
+	width: 1000px;
+	margin-bottom: 3px;
+}
+
+.headT01 {
+	width: 25px;
+	padding-top: 4px;
+	*padding-top: 4px;
+	_padding-top: 5px;
+	margin-left: 15px;
+	float: left;
+}
+
+.headT02 {
+	float: left;
+	padding-top: 2px;
+	*padding-top: 2px;
+	_padding-top: 3px;
+}
+
+.headT03 {
+	float: right;
+	line-height: 24px;
+	margin-right: 15px;
+}
+
+.headT04 {
+	float: left;
+	line-height: 24px;
+	padding-left: 15px;
+	width: 110px;
+	width: 125px\9; /*for all ie*/
+}
+
+.headM .logo {
+	float: left;
+	width: 180px;
+}
+
+.headM .banner03 {
+	float: left;
+	margin-left: 15px;
+	width: 395px;
+}
+
+.headM .banner04 {
+	float: right;
+	width: 400px;
+}
+
+.nav {
+	width: 1000px;
+	height: 35px;
+	float: left;
+	background-image:
+		url(http://res.hgold.com.cn/include/images/httopnav.gif);
+	background-repeat: no-repeat;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding-left: 10px;
+}
+
+.nav li {
+	padding: 6px 19px 0 19px;
+	background: url(http://res.hgold.com.cn/include/images/l.jpg) no-repeat;
+	float: left;
+	font-size: 14px;
+}
+
+.nav .on {
+	background: url(http://res.hgold.com.cn/include/images/httopnavbg.gif)
+		repeat-x;
+	height: 35px;
+}
+
+.nav .on a {
+	font-weight: bold;
+	color: #003366;
+}
+
+.nav .on a:link {
+	color: #003366;
+	font-weight: bold;
+}
+
+.nav .on a:hover {
+	color: #039;
+	font-weight: bold;
+}
+
+.nav .on a:visited {
+	color: #039;
+	font-weight: bold;
+}
+
+.nav .nobg {
+	background: none;
+}
+
+.nav li a {
+	color: #ffffff;
+}
+
+.nav li a:link {
+	color: #ffffff;
+}
+
+.nav li a:hover {
+	color: #D3F3FA;
+}
+
+.nav li a:visited {
+	color: #D3F3FA;
+}
+
+.nav .head_bbs {
+	margin-left: 20px;
+	padding: 6px 10px 0 10px;
+	background: url(http://res.hgold.com.cn/include/images/navicon.gif) 1px
+		9px no-repeat;
+	height: 20px;
+	font-size: 12px;
+}
+
+.nav .head_teach {
+	padding: 6px 0 0 10px;
+	background: url(http://res.hgold.com.cn/include/images/navicon.gif) 1px
+		-17px no-repeat;
+	height: 20px;
+	font-size: 12px;
+}
+</style>
+				<div id="head">
+					<div class="headT">
+						<div class="headT04">汇通财经旗下成员：</div>
+						<div class="headT01 bule12">
+							<img width="16px" height="16px"
+								src="http://res.hgold.cn/images/ht_16_16.png">
+						</div>
+						<!--<div class="headT01 bule12"><img width="16px" height="16px" src="http://res.hgold.com.cn/include/images/ht.gif"></div>-->
+						<div class="headT02">
+							<a title="汇通网" href="http://www.fx678.com">汇通网</a>
+						</div>
+						<div class="headT01 bule12">
+							<img width="16px" height="16px"
+								src="http://res.hgold.cn/images/hj_16_16.jpg">
+						</div>
+						<!--<div class="headT01 bule12"><img width="16px" height="16px" src="http://res.hgold.com.cn/images/tiop2.gif"></div>-->
+						<div class="headT02">
+							<a class="grey6" target="_blank" href="http://www.gold678.com">汇金网</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a class="Lred12B" target="_blank" href="/product/">产品与服务中心</a><img
+								width="23px" height="11px"
+								src="http://res.hgold.com.cn/img/img/new_top.gif">&nbsp;&nbsp;&nbsp;&nbsp;
+								<a target="_blank" href="/diy/index.shtml">定制服务</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							
+						</div>
+						<div class="headT03">
+							<a class="Lbule12" target="_blank"
+								href="http://t.fx678.com/reg.aspx">注册</a> <a class="Lblack12"
+								target="_blank" href="http://t.fx678.com/fxlogin.aspx">登录</a> <a
+								class="Lbule12" style="cursor: hand"
+								onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('http://www.fx678.com/');">
+								设为首页</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="headM">
+						<div class="logo">
+							<a href="http://www.fx678.com"> <img
+								src="http://res.hgold.com.cn/include/images/logo.jpg"
+								width="180" height="55" />
+							</a>
+						</div>
+						<div class="banner03" style="width: 395; height: 55">
+							<iframe src="/proxy_fx678.html?id=54951" width="395" height="55"
+								scrolling="no" frameborder="0"
+								style="”display: block; margin: 0”"></iframe>
+						</div>
+						<div class="banner04" style="width: 395; height: 55" align="right">
+							<iframe src="/proxy_fx678.html?id=54954" width="395" height="55"
+								scrolling="no" frameborder="0" style="display: block; margin: 0"></iframe>
+						</div>
+						<div class="nav">
+							<ul>
+								<li class="nobg"><a href="http://www.fx678.com/">首 页</a>
+								</li>
+								<li><a href="/news/default.shtml">外汇新闻</a>
+								</li>
+								<li><a href="/rates/index.aspx">行情中心</a>
+								</li>
+								<li><a href="/chart/index.aspx">外汇图形</a>
+								</li>
+								<li class="on"><a href="/indexs/index.html">财经日历</a>
+								</li>
+								<li><a href="/indexchart/index.html">经济数据</a>
+								</li>
+								<li><a href="/huiping/huiping.shtml">汇评中心</a>
+								</li>
+								<li><a href="http://t.fx678.com/strategy/default.aspx">交易策略</a>
+								</li>
+								<li><a href="/News/zhuanti.html">专题</a>
+								</li>
+								<li><a href="/brokers/index.html">经纪商</a>
+								</li>
+								<li class="head_bbs"><a href="http://my.fx678.com/">论坛</a>
+								</li>
+								<li class="head_teach"><a
+									href="http://online.fx678.com/index.aspx" target="_blank"
+									style="color: yellow"><b>课堂</b>
+								</a>
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+				</div>
+				<div style="float: left;">
+
+					<script type="text/javascript">
+						BAIDU_CLB_fillSlot("310302");
+					</script>
+
+				</div>
+				<div style="float: left; margin-left: 20px">
+
+					<script type="text/javascript">
+						BAIDU_CLB_fillSlot("310303");
+					</script>
+
+				</div>
+				<div style="text-align: left; margin-left: 8px">
+
+					<script type="text/javascript">
+						BAIDU_CLB_fillSlot("176834");
+					</script>
+
+					<br />
+
+					<script type="text/javascript">
+						BAIDU_CLB_fillSlot("176835");
+					</script>
+
+				</div>
+				<!--导航start-->
+				<!--导航end-->
+				<div class="bg_sub" id="sub">
+					<div class="float old">
+						<a href="http://www.fx678.com/indexs/eCalendar.html"
+							target="_blank">旧版</a>
+					</div>
+					<div class="float" id="sub_title">
+						<ul class="subtitle">
+							<li class="Selected"><a href="../index.shtml">经济指标</a></li>
+							<li><a href="../CentralBankNews.html" class="vist">央行动态</a>
+							</li>
+							<li><a href="../USAdata.html" class="vist">美国数据</a></li>
+							<li><a href="../Alldata.html" class="vist">各国数据</a></li>
+							<li><a href="../Index_week.html" class="vist">财经周历</a></li>
+						</ul>
+						<ul class="clear">
+						</ul>
+					</div>
+					<div class="float dw_sub3">
+						<ul>
+							<li class="sub_link"><a href="../ACalendar.html">A股日历</a></li>
+							<li class="sub_link"><a href="../HKCalendar.html">港股日历</a></li>
+							<li class="sub_link"><a href="../USACalendar.html">美股日历</a>
+							</li>
+						</ul>
+						<ul class="clear">
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!--内容start-->
+				<div>
+					<!--内容部分左侧-->
+					<div class="float">
+						<div class="div_con">
+							<div class="bg_title">
+								<div class="dw_divcon">
+									<div class="float titlelw">
+										<p class="hei25">
+											<img alt="" src="../images/img_rili.jpg"
+												style="vertical-align: top; _vertical-align: middle;" /> <span
+												class="search">按照日期条件查询：</span>
+										</p>
+										<div>
+											<ul>
+												<li><input id="txt_Date" type="text" value=""
+													class="input_date" onchange="serachData();" />
+												</li>
+												<li><input id="Button1" type="button"
+													class="button_date" onclick="WdatePicker({el:'txt_Date'})" />
+												</li>
+											</ul>
+											<ul class="clear">
+											</ul>
+										</div>
+									</div>
+
+									<div class="float textc titlerw" id="week">
+										<ul>
+											<a href="/indexs/html/20131216.shtml" style="cursor: hand">
+												<li class="week" id="20131216">
+													<p>周一</p>
+													<p>(12/16)</p></li> </a>
+											<a href="/indexs/html/20131217.shtml" style="cursor: hand">
+												<li class="week" id="20131217">
+													<p>周二</p>
+													<p>(12/17)</p></li> </a>
+											<a href="/indexs/html/20131218.shtml" style="cursor: hand">
+												<li class="week" id="20131218">
+													<p>周三</p>
+													<p>(12/18)</p></li> </a>
+											<a href="/indexs/html/20131219.shtml" style="cursor: hand">
+												<li class="week" id="20131219">
+													<p>周四</p>
+													<p>(12/19)</p></li> </a>
+											<a href="/indexs/html/20131220.shtml" style="cursor: hand">
+												<li class="week" id="20131220">
+													<p>周五</p>
+													<p>(12/20)</p></li> </a>
+											<a href="/indexs/index.shtml" style="cursor: hand">
+												<li class="week" id="20131221">
+													<p>周六</p>
+													<p>(12/21)</p></li> </a>
+											<a href="/indexs/html/20131222.shtml" style="cursor: hand">
+												<li class="week" id="20131222">
+													<p>周日</p>
+													<p>(12/22)</p></li> </a>
+										</ul>
+										<ul class="clear">
+										</ul>
+									</div>
+									<script language="javascript">
+										var str = window.location.href;
+										str = str.substring(str
+												.lastIndexOf("/") + 1)
+										str = str.substring(0, str
+												.lastIndexOf("."))
+										if (document.getElementById(str) != null) {
+											document.getElementById(str).className = "choosetoday";
+										}
+									</script>
+									<div class=" clear"></div>
+									<input type="hidden" id="txt_Test" value="1" />
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="marl16">
+								<p class="hei25">
+									<img alt="" src="../images/huobi.jpg"
+										style="vertical-align: top; _vertical-align: middle;" /> <span
+										class="search">按货币条件查询：</span><span><a target="_blank"
+										href="http://www.fx678.com/3g/index.shtml">手机版财经日历</a>
+									</span> <span style="float:inherit"><script
+											type="text/javascript">
+										BAIDU_CLB_fillSlot("632405");
+									</script>
+									</span>
+								</p>
+								<div class="bg_flag">
+									<ul>
+										<li><img alt="" src="../images/flag1.jpg" /></li>
+										<li><img alt="" src="../images/flag2.jpg" /></li>
+										<li><img alt="" src="../images/flag3.jpg" /></li>
+										<li><img alt="" src="../images/flag4.jpg" /></li>
+										<li><img alt="" src="../images/flag5.jpg" /></li>
+										<li><img alt="" src="../images/flag6.jpg" /></li>
+										<li><img alt="" src="../images/flag7.jpg" /></li>
+										<li><img alt="" src="../images/china.jpg" /></li>
+									</ul>
+									<ul>
+										<li><input name="country" type="radio" class="checkbox"
+											value="1" onclick="checkCountry(this);" />
+											美元</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="13,5,6,44" onclick="checkCountry(this);" />
+											欧元</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="2" onclick="checkCountry(this);" />
+											日元</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="4" onclick="checkCountry(this);" />
+											英镑</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="15" onclick="checkCountry(this);" />
+											瑞郎</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="12" onclick="checkCountry(this);" />
+											澳元</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="8" onclick="checkCountry(this);" />
+											加元</li>
+										<li><input name="country" type="radio" class="checkbox"
+											value="3" onclick="checkCountry(this);" />
+											人民币</li>
+									</ul>
+									<ul class="clear">
+									</ul>
+								</div>
+							</div>
+							<div class="dw_tabtitle" style="float: left; width: 730px;">
+								<span class="title" style="float: left; padding-left: 5px;">
+									<img alt="" src="../images/clock.jpg" class="img_rili" /> <span
+									id="sp_DateValue">12/19</span>&nbsp;经济数据一览</span><span
+									style="float: left;
+                                padding: 0 20px;"><a
+									target="_blank" href="http://www.fx678.com/news/default.shtml">提示：新闻中心快讯栏目实时更新经济指标</a>
+								</span><span style="float: right; padding-right: 10px;"><a
+									href="mailto:editor.tq@gmail.com?subject=%B2%C6%BE%AD%C8%D5%C0%FA%CE%CA%CC%E2%B7%B4%C0%A1"><img
+										src="../images/mail.gif" width="16px" height="12px"
+										style="padding-right: 2px; vertical-align: text-top" />问题反馈</a>&nbsp;&nbsp;<a
+									href="http://www.fx678.com/zjjt/index.aspx" target="_blank"><img
+										src="../images/faq.gif" />在线答疑</a>
+								</span>
+							</div>
+							<div class="TableBlock" id="div_currency">
+								<table width="725px" border="0" cellspacing="0" cellpadding="0"
+									class="BlueTable"
+									style="text-align: center; padding: 1px; margin-left: 16px;">
+									<tr>
+										<th width="53px">时间</th>
+										<th>国家</th>
+										<th width="233px" style="padding: 0 9px;">指标名称</th>
+										<th width="52">重要性</th>
+										<th width="74">前值</th>
+										<th width="75">预测值</th>
+										<th width="75">公布值</th>
+										<th width="45px">图表</th>
+										<th>解读</th>
+									</tr>
+									<tr>
+										<td>03:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1579&id=9599&fid=3836'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='美联储公布利率决定 点击查看详细..'><span style='color:Red'>美联储公布利率决定</span>
+														</a><a href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>0-0.25%</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_9599'>0-0.25%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3836'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups9599' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1579&id=9599&fid=3836'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>03:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><span
+															style='color:Red'>美联储最新经济预期</span><a
+															href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'></td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_18486'>已公布</span>
+														</td>
+														<td width='45px'>---</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups18486' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a href='../Datadetails.aspx?tid=1866&id=18486&fid=0'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>03:30</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><span
+															style='color:Red'>美联储主席新闻发布会</span><a
+															href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'></td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_18490'>已公布</span>
+														</td>
+														<td width='45px'>---</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups18490' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a href='../Datadetails.aspx?tid=1867&id=18490&fid=0'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>05:45</td>
+										<td>新西兰</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1675&id=11906&fid=4028'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='第三季度GDP年率 点击查看详细..'><span style='color:Red'>第三季度GDP年率</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block11906'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(11906);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>+2.5%</td>
+														<td width='75'>+3.2%</td>
+														<td width='75'><span id='span_11906'>+3.5%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4028'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11906' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11906'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--第三季度GDP季率</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>+0.2%</td>
+															<td width='75'>+1.1%</td>
+															<td width='75'><span id='span_11909'>+1.1%</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4030'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1675&id=11906&fid=4028'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>07:50</td>
+										<td>日本</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1199&id=11945&fid=3076'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='12月13日当周买进外国股票(周) 点击查看详细..'><span>12月13日当周买进外国股票(周)</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block11945'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(11945);' src='../images/sbt.jpg' />
+														</a>&nbsp;(亿日元)</td>
+														<td width='52'><span style='color:#0bae15;'>低</span>
+														</td>
+														<td width='74'>-1275</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_11945'>-2125</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3076'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11945' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11945'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月13日当周外资买进日股</td>
+															<td width='52'><span style='color:#0bae15;'>低</span>
+															</td>
+															<td width='74'>+1140</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12055'>+6193</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3080'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11945'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月13日当周外资买进日债</td>
+															<td width='52'><span style='color:#0bae15;'>低</span>
+															</td>
+															<td width='74'>-124</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12056'>+4255</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3082'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11945'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月13日当周买进外国债券</td>
+															<td width='52'><span style='color:#0bae15;'>低</span>
+															</td>
+															<td width='74'>+3901</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12057'>+1105</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4374'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1199&id=11945&fid=3076'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>12:30</td>
+										<td>日本</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1151&id=11463&fid=2980'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='10月所有产业活动指数月率 点击查看详细..'><span>10月所有产业活动指数月率</span>
+														</a><a href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:#0bae15;'>低</span>
+														</td>
+														<td width='74'>+0.4%</td>
+														<td width='75'>-0.2%</td>
+														<td width='75'><span id='span_11463'>-0.2%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=2980'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11463' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1151&id=11463&fid=2980'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>14:45</td>
+										<td>瑞士</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><span
+															style='color:Red'>联邦政府经济事务司(SECO)公布最新经济预期</span><a
+															href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'></td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_18521'>已公布</span>
+														</td>
+														<td width='45px'>---</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups18521' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a href='../Datadetails.aspx?tid=1862&id=18521&fid=0'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>15:00</td>
+										<td>瑞士</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=339&id=12081&fid=1356'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='11月贸易帐 点击查看详细..'><span style='color:Red'>11月贸易帐</span>
+														</a><a href='javascript:void(0)'></a>&nbsp;(亿瑞郎)</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>+22.82</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_12081'>+21.12</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=1356'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12081' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=339&id=12081&fid=1356'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>17:00</td>
+										<td>意大利</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1719&id=18850&fid=4116'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='11月平均每小时工资月率 点击查看详细..'><span>11月平均每小时工资月率</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block18850'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(18850);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:#004b87;'>中</span>
+														</td>
+														<td width='74'>+0.2%</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_18850'>持平</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4116'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups18850' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index18850'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月平均每小时工资年率</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>+1.4%</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_18862'>+1.3%</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4118'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1719&id=18850&fid=4116'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>17:00</td>
+										<td>欧元区</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1660&id=11511&fid=3998'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='10月未季调经常帐 点击查看详细..'><span>10月未季调经常帐</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block11511'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(11511);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:#004b87;'>中</span>
+														</td>
+														<td width='74'>+152</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_11511'>+262</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3998'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11511' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11511'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--10月季调后经常帐</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>+149</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_11523'>+218</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3996'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1660&id=11511&fid=3998'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>17:00</td>
+										<td>欧元区</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1661&id=11535&fid=4000'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='10月净直接投资 点击查看详细..'><span>10月净直接投资</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block11535'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(11535);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:#004b87;'>中</span>
+														</td>
+														<td width='74'>-65</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_11535'>-19</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4000'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11535' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11535'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--10月投资组合净流入</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>-21</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_11558'>-48</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4002'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11535'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--10月直接投资与投资组合</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>-86</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_11559'>-67</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4004'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1661&id=11535&fid=4000'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>17:30</td>
+										<td>英国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1684&id=12141&fid=4046'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='11月季调后零售销售月率 点击查看详细..'><span style='color:Red'>11月季调后零售销售月率</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block12141'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(12141);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>-0.9%</td>
+														<td width='75'>+0.3%</td>
+														<td width='75'><span id='span_12141'>+0.3%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4046'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12141' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12141'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月季调后零售销售年率</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>+1.8%</td>
+															<td width='75'>+2.3%</td>
+															<td width='75'><span id='span_12164'>+2.0%</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4048'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1684&id=12141&fid=4046'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>21:30</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=754&id=11032&fid=2186'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='12月14日当周初请失业金人数 点击查看详细..'><span
+																style='color:Red'>12月14日当周初请失业金人数</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block11032'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(11032);' src='../images/sbt.jpg' />
+														</a>&nbsp;(万)</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>36.9</td>
+														<td width='75'>33.4</td>
+														<td width='75'><span id='span_11032'>37.9</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=2186'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups11032' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11032'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月14日当周初请失业金人数四周均值</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>33.025</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_11138'>34.35</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3128'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index11032'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月7日当周续请失业金人数</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>279</td>
+															<td width='75'>278.0</td>
+															<td width='75'><span id='span_11139'>288.4</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3130'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=754&id=11032&fid=2186'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>23:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=586&id=12201&fid=1850'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='12月费城联储制造业指数 点击查看详细..'><span>12月费城联储制造业指数</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block12201'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(12201);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:#004b87;'>中</span>
+														</td>
+														<td width='74'>6.5</td>
+														<td width='75'>10</td>
+														<td width='75'><span id='span_12201'>7.0</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=1850'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12201' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12201'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月费城联储制造业就业指数</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>1.1</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12257'>2.2</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3902'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12201'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月费城联储制造业物价获得指数</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>10.0</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12258'>12.9</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3904'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12201'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月费城联储制造业物价支付指数</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>29.9</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12259'>20.1</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3906'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12201'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月费城联储制造业新订单指数</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>11.8</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12260'>15.4</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3908'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12201'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--12月费城联储制造业装船指数</td>
+															<td width='52'><span style='color:#004b87;'>中</span>
+															</td>
+															<td width='74'>5.6</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12261'>13.3</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3910'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=586&id=12201&fid=1850'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>23:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1192&id=12273&fid=3062'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='11月成屋销售总数年化 点击查看详细..'><span style='color:Red'>11月成屋销售总数年化</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block12273'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(12273);' src='../images/sbt.jpg' />
+														</a>&nbsp;(万户)</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>512</td>
+														<td width='75'>503</td>
+														<td width='75'><span id='span_12273'>490</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3062'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12273' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12273'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月成屋销售年化月率</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>-3.2%</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12285'>-4.3%</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3064'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1192&id=12273&fid=3062'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>23:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1686&id=12297&fid=4050'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='11月谘商会领先指标月率 点击查看详细..'><span style='color:Red'>11月谘商会领先指标月率</span>
+														</a><a href='javascript:void(0)'>&nbsp;<img
+																id='tr_block12297'
+																style='cursor:pointer;vertical-align:text-bottom'
+																onclick='trBlock(12297);' src='../images/sbt.jpg' />
+														</a>
+														</td>
+														<td width='52'><span style='color:Red;'><strong>高<img
+																	src='../images/002.gif' />
+															</strong>
+														</span>
+														</td>
+														<td width='74'>+0.1%</td>
+														<td width='75'>+0.7%</td>
+														<td width='75'><span id='span_12297'>+0.8%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4050'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12297' style='display: block; border: 0px'>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12297'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月谘商会领先指标</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>97.5</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12331'>98.3</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4052'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12297'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月谘商会同步指标月率</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>+0.2%</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12332'>+0.4%</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4054'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<table cellspacing='0' cellpadding='0' border='0'
+													id='div_Index12297'>
+													<tbody>
+														<tr>
+															<td width='233px'
+																style='text-align: left;  padding: 0 9px;'>--11月谘商会滞后指标月率</td>
+															<td width='52'><span style='color:Red;'><strong>高<img
+																		src='../images/002.gif' />
+																</strong>
+															</span>
+															</td>
+															<td width='74'>+0.3%</td>
+															<td width='75'>---</td>
+															<td width='75'><span id='span_12333'>持平</span>
+															</td>
+															<td width='45px'><a
+																href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=4056'
+																target='_blank'><img alt=''
+																	src='../images/icon_tubiao.gif' />
+															</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1686&id=12297&fid=4050'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>23:00</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1227&id=12416&fid=3132'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='12月7日当周三菱东京UFJ银行商业景气指数 点击查看详细..'><span>12月7日当周三菱东京UFJ银行商业景气指数</span>
+														</a><a href='javascript:void(0)'></a>
+														</td>
+														<td width='52'><span style='color:#0bae15;'>低</span>
+														</td>
+														<td width='74'>-0.3%</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_12416'>-0.3%</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3132'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12416' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1227&id=12416&fid=3132'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+									<tr>
+										<td>23:30</td>
+										<td>美国</td>
+										<td colspan='6' style='border: none;'><table border='0'
+												cellpadding='0' cellspacing='0'>
+												<tbody>
+													<tr>
+														<td width='233px'
+															style='text-align: left; padding: 0 9px;'><a
+															href='../Datadetails.aspx?tid=1228&id=12472&fid=3134'
+															target='_blank'
+															style='border: none;text-decoration:underline;'
+															title='12月14日当周EIA天然气库存 点击查看详细..'><span>12月14日当周EIA天然气库存</span>
+														</a><a href='javascript:void(0)'></a>&nbsp;(亿立方英尺)</td>
+														<td width='52'><span style='color:#0bae15;'>低</span>
+														</td>
+														<td width='74'>-810</td>
+														<td width='75'>---</td>
+														<td width='75'><span id='span_12472'>-2850</span>
+														</td>
+														<td width='45px'><a
+															href='http://www.fx678.com/indexchart/flash/economyData/indexchart.aspx?id=3134'
+															target='_blank' title='点击查看历史数据'><img alt=''
+																src='../images/icon_tubiao.gif' />
+														</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div id='tr_popups12472' style='display: block; border: 0px'>
+											</div>
+										</td>
+										<td><a
+											href='../Datadetails.aspx?tid=1228&id=12472&fid=3134'
+											target='_blank'><img src='../Calendar/icon_detailed.gif' />
+										</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class='dw_tabtitle'>
+								<img alt='' src='../images/Meeting.jpg' class='img_rili' /><span
+									class='title'>假期预告</span>
+							</div>
+							<div class='bigtable'>
+								<ul class='tabtitle2'>
+									<li class='w_60' style='width: 65px'>时间</li>
+									<li class='w_60'>国家</li>
+									<li class='w_65' style='width: 82px'>地点</li>
+									<li class='w_525' style='text-align: left; width: 518px'>事件
+									</li>
+								</ul>
+								<div class='test' id='Div1'>
+									<div style='text-align:center'>今日无重要假期预告公布！</div>
+								</div>
+							</div>
+							<div style='text-align: center; color: Red'></div>
+							<div class="dw_tabtitle">
+								<img alt="" src="../images/Meeting.jpg" class="img_rili" /> <span
+									class="title">财经大事</span>
+							</div>
+							<div class="bigtable">
+								<ul class="tabtitle2">
+									<li class="w_60" style="width: 65px">时间</li>
+									<li class="w_60">国家</li>
+									<li class="w_65" style="width: 82px">地点</li>
+									<li class="w_65" style="width: 82px">重要性</li>
+									<li class="w_525" style="text-align: left; width: 436px">事件
+									</li>
+								</ul>
+								<div class="test" id="ulColor">
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;---</li>
+										<li class='w_60'>日本</li>
+										<li class='w_65' style='width: 82px'>东京</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>日本央行举行为期两天的货币政策委员会会议(至20日)</span>
+										</li>
+									</ul>
+									<ul class='tabcon2'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;03:00</li>
+										<li class='w_60'>美国</li>
+										<li class='w_65' style='width: 82px'>华盛顿</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>美国联邦公开市场委员会(FOMC)宣布利率决定</span>
+										</li>
+									</ul>
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;03:00</li>
+										<li class='w_60'>美国</li>
+										<li class='w_65' style='width: 82px'>华盛顿</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>美联储公布最新经济预期</span>
+										</li>
+									</ul>
+									<ul class='tabcon2'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;03:30</li>
+										<li class='w_60'>美国</li>
+										<li class='w_65' style='width: 82px'>华盛顿</li>
+										<li class='w_65' style='width: 82px'>低</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'>在美国联邦公开市场委员会举行为期两天的议息会议后，美联储主席伯南克举行媒体发布会</li>
+									</ul>
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;16:30</li>
+										<li class='w_60'>德国</li>
+										<li class='w_65' style='width: 82px'>法兰克福</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>德国央行管理委员会委员Carl-Ludwig
+												Thiele就单一欧元支付区(SEPA)过渡问题举行记者会。</span>
+										</li>
+									</ul>
+									<ul class='tabcon2'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;17:30</li>
+										<li class='w_60'>法国</li>
+										<li class='w_65' style='width: 82px'>巴黎</li>
+										<li class='w_65' style='width: 82px'>低</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'>法国财政部长莫斯可维西与德国财政部长朔伊布勒(Wolfgang
+											Schaeuble)召开记者会。</li>
+									</ul>
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;21:30</li>
+										<li class='w_60'>美国</li>
+										<li class='w_65' style='width: 82px'>德克萨斯</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>达拉斯联储主席费舍尔进行题为“德州经济状况”的演讲。</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class='dw_tabtitle'>
+								<img alt='' src='../images/Meeting.jpg' class='img_rili' /><span
+									class='title'>国债发行预告</span>
+							</div>
+							<div class='bigtable'>
+								<ul class='tabtitle2'>
+									<li class='w_60' style='width: 65px'>时间</li>
+									<li class='w_60'>国家</li>
+									<li class='w_65' style='width: 82px'>地点</li>
+									<li class='w_65' style='width: 82px'>重要性</li>
+									<li class='w_525' style='text-align: left; width: 436px'>事件
+									</li>
+								</ul>
+								<div class='test' id='Div1'>
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;---</li>
+										<li class='w_60'>美国</li>
+										<li class='w_65' style='width: 82px'>---</li>
+										<li class='w_65' style='width: 82px'>低</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'>美国标售七年期公债</li>
+									</ul>
+									<ul class='tabcon2'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;---</li>
+										<li class='w_60'>日本</li>
+										<li class='w_65' style='width: 82px'>---</li>
+										<li class='w_65' style='width: 82px'>低</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'>日本标售三个月期贴现国库券及提高流动性的标债</li>
+									</ul>
+									<ul class='tabcon1'>
+										<li class='w_60' style='width: 65px'>12/19&nbsp;---</li>
+										<li class='w_60'>西班牙</li>
+										<li class='w_65' style='width: 82px'>---</li>
+										<li class='w_65' style='width: 82px'><span
+											style='color:red'><strong>高</strong>
+										</span>
+										</li>
+										<li class='w_525 text_l'
+											style='text-align: left; width: 436px'><span
+											style='color:red'>西班牙标售公债</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							
+							
+							<div style='text-align: center; color: Red'></div>
+						</div>
+						<div class="con_sm">
+							<p class="bor_sm">免责声明</p>
+							<p>1、FX678财经日历的内容，是已知各国政府原定公布的经济指标、财经事件及时间表。</p>
+							<p>
+								2、FX678不保证所有经济指标和财经事件的发生时间及?容，各国政府可能因为自身原因，临时修改或推迟时间，此类情?难以控制。</p>
+							<p>3、财经日历栏目，不保证第一时间更新最新的数据。如需第一时间获得最新数据，请点击网站新闻中心查看。</p>
+							<p>
+								4、“前值”，是指本数据指标上一次已公布的数值，例如，此次公布的是美国3月份的失业率月率，“前值”则指2月份的失业率月率。
+								其它周期依此类推，季度数据的“前值”对应的是上一次季度数据，周数据的“前值”对应的则是上一周的数据。若公布的数据是修正值和终值，
+								则“前值”指该数据前一次公布的数值，如，美国第一季度GDP修正值，“前值”为第一季度GDP初值；第一季度GDP终值，“前值”为第一季度GDP
+								修正值。</p>
+						</div>
+					</div>
+					<!--内容部分右侧 央行利率-->
+					<div class="float dw_con_right">
+
+						<div class="con_right">
+							<div class="bg_rtitle">央行利率</div>
+							<div class="bg_rtitle2">
+								<ul>
+									<li class="w_72">货币</li>
+									<li class="w_58">当前利率</li>
+									<li class="w_85">下次议会时间</li>
+								</ul>
+								<ul class="clear">
+								</ul>
+							</div>
+
+							<div class="forul">
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag1.jpg" />
+										美元</li>
+									<li class="w_58">0-0.25</li>
+									<li class="w_85">01-30</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag2.jpg" />
+										欧元</li>
+									<li class="w_58">0.25</li>
+									<li class="w_85">01-09</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag3.jpg" />
+										日元</li>
+									<li class="w_58">0-0.1</li>
+									<li class="w_85">12-20</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag4.jpg" />
+										英镑</li>
+									<li class="w_58">0.50</li>
+									<li class="w_85">01-09</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag5.jpg" />
+										瑞郎</li>
+									<li class="w_58">0-0.25</li>
+									<li class="w_85">12-12</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag6.jpg" />
+										澳元</li>
+									<li class="w_58">2.50</li>
+									<li class="w_85">02-04</li>
+								</ul>
+								<ul>
+									<li class="w_72"><img alt="" src="../images/flag7.jpg" />
+										加元</li>
+									<li class="w_58">1.00</li>
+									<li class="w_85">12-04</li>
+								</ul>
+								<ul style="border: 0;">
+									<li class="w_72"><img alt="" src="../images/flag8.jpg" />
+										纽元</li>
+									<li class="w_58">2.50</li>
+									<li class="w_85">07-25</li>
+								</ul>
+								<ul class="clear" style="height: 0px; border: 0;">
+								</ul>
+							</div>
+<!--          -->
+
+
+
+
+						</div>
+						<div style="padding-top: 10px;">
+							<p class="title2">福布斯富豪榜</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/ForbesRank.htm"
+									target="_blank" class="bg_button"> 福布斯2010年富豪榜 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/2011ForbesRank.htm"
+									target="_blank" class="bg_button"> 福布斯2011年富豪榜 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/2012ForbesRank.htm"
+									target="_blank" class="bg_button"> 福布斯2012年富豪榜 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/ChineseForbesRank.htm"
+									target="_blank" class="bg_button"> 福布斯2010年富豪榜中国富豪 </a>
+							</p>
+							<p>
+								<a
+									href="http://www.fx678.com/indexchart/ChineseForbesRank2011.htm"
+									target="_blank" class="bg_button">福布斯2011年富豪榜中国富豪 </a>
+							</p>
+							<p>
+								<a
+									href="http://www.fx678.com/indexchart/ChineseForbesRank2012.htm"
+									target="_blank" class="bg_button">福布斯2012年富豪榜中国富豪 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/Rich_List.htm"
+									target="_blank" class="bg_button"> 胡润百富榜 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/teach/fortune500.htm"
+									target="_blank" class="bg_button"> 2009世界500强公司名单 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/teach/2010fortune500-1.htm"
+									target="_blank" class="bg_button"> 2010世界500强公司名单 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/teach/Chinese500.htm"
+									target="_blank" class="bg_button"> 2009中国500强公司名单 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/teach/2010Chinese500-1.htm"
+									target="_blank" class="bg_button"> 2010中国500强公司名单 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/ProvinceGDPRank.htm"
+									target="_blank" class="bg_button"> 省份主要经济数据 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/CityGDPRank.htm"
+									target="_blank" class="bg_button"> 城市主要经济数据 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/indexchart/GDPRankTop50.htm"
+									target="_blank" class="bg_button"> 全球GDP总量排行 </a>
+							</p>
+							<p>
+								<a href="http://www.fx678.com/teach/Celebrity.htm"
+									target="_blank" class="bg_button"> 福布斯中国名人榜 </a>
+							</p>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<!--内容end-->
+				<div>
+					<style>
+/* 首页 */
+body,dd,dl,dt,ul,li,p,div,img,span,h1,h2,h3,h4,h5,h6,h7 {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+body {
+	font-family: 宋体;
+	font-size: 12px;
+	text-align: left;
+	line-height: 20px;
+	color: #333;
+	background-color: #fff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.clear {
+	clear: both;
+}
+
+/* foot */
+#foot2 {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.foottop {
+	width: 1000px;
+	height: 33px;
+	float: left;
+	background-color: #85bff9;
+	margin-top: 10px;
+}
+
+.footmid {
+	width: 1000px;
+	height: 180px;
+	float: left;
+	background-image:
+		url(http://res.hgold.com.cn/include/images/foot_bg.jpg);
+	background-repeat: no-repeat;
+}
+
+.footbottom {
+	width: 1000px;
+	height: 38px;
+	float: left;
+	background-color: #7fb5eb;
+}
+
+.foottopLEFT {
+	width: 195px;
+	height: 25px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
+	font-size: 14px;;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.foottopRIGHT {
+	float: right;
+	margin-top: 5px !important;
+	margin-top: 12px;
+	margin-right: 10px;
+	height: 25px;
+}
+
+.footmidCON {
+	height: auto;
+	margin-top: 15px;
+	margin-left: 25px !important;
+	margin-left: 12px;
+	float: left;
+}
+
+.footmidCON li {
+	height: auto;
+	float: left;
+	text-align: left;
+}
+
+.footlidiv {
+	width: 140px;
+	height: auto;
+	float: left;
+}
+
+.footlidiv li {
+	height: 25px;
+	float: left;
+}
+
+.footlidiv1 {
+	width: 130px;
+	height: auto;
+	float: left;
+}
+
+.footlidiv1 li {
+	height: 25px;
+	float: left;
+}
+
+.footlititle {
+	width: 126px;
+	height: 25px;
+	padding-left: 8px;
+	background-repeat: no-repeat;
+	background-image: url(http://res.hgold.com.cn/include/images/doll.gif);
+	background-position: left 8px;
+}
+
+.footlititle1 {
+	width: 110px;
+	height: 25px;
+	padding-left: 8px;
+	background-repeat: no-repeat;
+	background-image: url(http://res.hgold.com.cn/include/images/doll.gif);
+	background-position: left 8px;
+}
+
+.footer {
+	background: url(http://res.hgold.com.cn/include/images/image_65.gif)
+		repeat-x;
+	width: 1000px;
+	float: left;
+	clear: both;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.footer img {
+	vertical-align: middle;
+}
+
+h4 {
+	line-height: 40px;
+	font-weight: normal;
+	color: #999999;
+	font-size: 12px;
+}
+
+.footer p {
+	font-size: 12px;
+}
+
+/*font*/
+.bule12 {
+	color: #0761b7;
+}
+
+.bule12B {
+	color: #0761b7;
+	font-weight: bold;
+}
+
+.black12 {
+	color: #333;
+}
+
+.red12 {
+	color: #ff0000;
+}
+
+.green12 {
+	color: #009900;
+}
+
+.red12B {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.green12B {
+	color: #009900;
+	font-weight: bold;
+}
+
+.NAV14 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 31px;
+	color: #003366;
+}
+
+a:link,a:visited {
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0080C0;
+	text-decoration: none;
+}
+
+a.Lblack12:link,a.Lblack12:visited {
+	color: #333;
+	text-decoration: none;
+	font-family: 宋体;
+	font-size: 12px;
+	border: none;
+	line-height: 20px;
+}
+
+a.Lblack12:hover {
+	color: #4693de;
+	text-decoration: none;
+	font-family: 宋体;
+	font-size: 12px;
+	line-height: 20px;
+	border: none;
+}
+
+a.Lfont12B:link,a.Lfont12B:visited {
+	color: #d99228;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 25px;
+	font-weight: bold;
+}
+
+a.Lfont12B:hover {
+	color: #666;
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 25px;
+	font-weight: bold;
+}
+
+a.rednB:link,a.rednB:visited {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+a.rednB:hover {
+	color: #F30;
+	text-decoration: none;
+}
+</style>
+
+					<div id="foot2">
+						<div class="foottop">
+							<div class="foottopLEFT">
+								<p>精品导航</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="footmid">
+							<div class="footmidCON">
+								<ul>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a href="/news/"
+													target="_blank" class="Lfont12B"> 外汇资讯</a>
+												</li>
+												<li class="footlititle"><a
+													href="/News/forex/index.html" target="_blank"
+													class="Lblack12">外汇评论</a>
+												</li>
+												<li class="footlititle"><a
+													href="/News/market/stock.html" target="_blank"
+													class="Lblack12">全球股市信息</a>
+												</li>
+												<li class="footlititle"><a
+													href="/News/market/gold.html" target="_blank"
+													class="Lblack12">黄金信息</a>
+												</li>
+												<li class="footlititle"><a href="/News/market/oil.html"
+													target="_blank" class="Lblack12">能源市场</a>
+												</li>
+												<li class="footlititle"><a href="/News/zhuanti.asp"
+													target="_blank" class="Lblack12">外汇专题</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a
+													href="http://q.fx678.com/rates/index.aspx" target="_blank"
+													class="Lfont12B">外汇行情</a>
+												</li>
+												<li class="footlititle"><a href="/rates/RMBprice.html"
+													target="_blank" class="Lblack12">人民币外汇牌价</a>
+												</li>
+												<li class="footlititle"><a
+													href="/rates/WorldIndexs.html" target="_blank"
+													class="Lblack12">全球股市</a>
+												</li>
+												<li class="footlititle"><a href="/rates/Metals.html"
+													target="_blank" class="Lblack12">国际贵金属</a>
+												</li>
+												<li class="footlititle"><a href="/rates/sge.html"
+													target="_blank" class="Lblack12">黄金价格</a>
+												</li>
+												<li class="footlititle"><a
+													href="/rates/OnlineQuote.html" target="_blank"
+													class="Lblack12">外汇看盘器</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a href="/chart/index.aspx"
+													target="_blank" class="Lfont12B">外汇图形</a>
+												</li>
+												<li class="footlititle"><a href="/chart/line.aspx"
+													target="_blank" class="Lblack12">外汇走势对比</a>
+												</li>
+												<li class="footlititle"><a href="/rates/usdChart.html"
+													target="_blank" class="Lblack12">美元指数走势</a>
+												</li>
+												<li class="footlititle"><a
+													href="/rates/MetalsChart1.html" target="_blank"
+													class="Lblack12">黄金走势图</a>
+												</li>
+												<li class="footlititle"><a
+													href="/rates/crudeChart.html" target="_blank"
+													class="Lblack12">石油走势图</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a
+													href="/indexchart/ChineseForbesRank.htm" target="_blank"
+													class="Lfont12B">宏观经济</a>
+												</li>
+												<li class="footlititle"><a href="/News/3/313.html"
+													target="_blank" class="Lblack12">经济分析</a>
+												</li>
+												<li class="footlititle"><a
+													href="/News/keywords/602005.html" target="_blank"
+													class="Lblack12">指标预测</a>
+												</li>
+												<li class="footlititle"><a
+													href="/News/keywords/602006.html" target="_blank"
+													class="Lblack12">指标解读</a>
+												</li>
+												<li class="footlititle"><a
+													href="/indexs/MainInterest.html" class="Lblack12">央行利率</a>
+												</li>
+												<li class="footlititle"><a href="/indexs/"
+													class="Lblack12">财经大事预告</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a href="http://my.fx678.com/"
+													target="_blank" class="Lfont12B">外汇社区</a>
+												</li>
+												<li class="footlititle"><a href="http://book.fx678.com"
+													target="_blank" class="Lblack12">外汇读书频道</a>
+												</li>
+												<li class="footlititle"><a href="http://data.fx678.com"
+													target="_blank" class="Lblack12">期货数据</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://huilv.fx678.com/" target="_blank"
+													class="Lblack12">汇率查询</a>
+												</li>
+												<li class="footlititle"><a href="http://top.fx678.com/"
+													target="_blank" class="Lblack12">财经热点</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://waihuixuexi.fx678.com" target="_blank"
+													class="Lblack12">外汇学习</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv">
+											<ul>
+												<li class="footlititle"><a href="/fxtrade/"
+													target="_blank" class="Lfont12B">模拟交易</a>
+												</li>
+												<li class="footlititle"><a href="http://t.fx678.com"
+													target="_blank" class="Lblack12">汇通交易工场</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://my.fx678.com/forum.php?mod=forumdisplay&fid=2"
+													target="_blank" class="Lblack12">外汇黄金吧</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://my.fx678.com/home.php" target="_blank"
+													class="Lblack12">会员动态</a>
+												</li>
+												<li class="footlititle"><a href="http://v.fx678.com/"
+													target="_blank" class="Lblack12">汇通视频</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://www.fx678.com/cj" target="_blank"
+													class="Lblack12">财经导航</a>
+												</li>
+											</ul>
+										</div></li>
+									<li>
+										<div class="footlidiv1">
+											<ul>
+												<li class="footlititle"><a href="/product/vip/"
+													target="_blank" class="Lfont12B">产品中心</a>
+												</li>
+												<li class="footlititle"><a
+													href="http://www.fx678.com/3g/index.shtml" target="_blank"
+													class="Lblack12">汇通财经手机版下载</a>
+												</li>
+												<li class="footlititle"><a href="http://yht.fx678.com"
+													target="_blank" class="Lblack12">易汇通行情分析软件</a>
+												</li>
+												<li class="footlititle"><a href="/fxtrade/"
+													target="_blank" class="Lblack12">易汇通模拟交易软件</a>
+												</li>
+												<li class="footlititle"><a
+													href="/fxtrade/AllFxTrade.asp" target="_blank"
+													class="rednB">交易商模拟账户申请</a>
+												</li>
+												<li class="footlititle"><a href="/News/allnews.html"
+													target="_blank" class="Lblack12">历史新闻</a>
+												</li>
+											</ul>
+										</div></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer">
+							<h4>
+								<a href="/corp/aboutus.html" target="_blank">关于汇通财经</a> | <a
+									href="/corp/contactus.html" target="_blank">联系我们</a> | <a
+									href="/product/vip/" target="_blank">产品服务</a> | <a
+									href="/corp/call_revelation.html" target="_blank">征稿启事</a> | <a
+									href="/corp/society.html" target="_blank">诚聘英才</a> | <a
+									href="/corp/link.html" target="_blank">友情链接</a> | <a
+									href="/corp/law_statement.html" target="_blank">法律声明</a> | <a
+									href="/corp/sitemap.html" target="_blank">网站地图</a> | <a
+									href="/corp/rss.html" target="_blank">RSS邮件订阅</a>
+							</h4>
+							建议及投诉热线：021-62172178 | 版权所有：<a href="http://www.fx678.com"
+								title="汇通网">汇通网</a> | <a href="/corp/quotes_graphics.html"
+								target="_blank">数据引用</a> <a href="http://adm.baidu.com/"
+								target="_blank"><img
+								src="http://res.hgold.com.cn/include/images/baidu_vip.gif"
+								border="0" alt="百度广告管家，精准广告支持" width="118" height="40" />
+							</a>
+							<p class="Lblack12">
+								<a href="http://www.miibeian.gov.cn/" target="_blank"><img
+									src="http://res.hgold.com.cn/include/images/image_71.gif"
+									width="22" height="25" /> 沪ICP备08112083号</a> <a
+									href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg"
+									target="_blank"><img
+									src="http://res.hgold.com.cn/include/images/image_68.jpg"
+									width="73" height="29" />
+								</a>
+							</p>
+						</div>
+					</div>
+
+					<div id="Layer1"
+						style="position:absolute; width:0px; height:0px; z-index:1; left: 0; top: 0; visibility: hidden">
+
+						<!--<script language="JavaScript"> 
+    var __cc_uid="fx678"; 
+</script>
+    <script language="JavaScript" 
+    src="http://www.fx678.com/htcount/count.js"> 
+</script>
+-->
+						<script type="text/javascript"
+							src="http://js.tongji.linezing.com/884719/tongji.js"></script>
+						<noscript>
+							<a href="http://www.linezing.com"><img
+								src="http://img.tongji.linezing.com/884719/tongji.gif" />
+							</a>
+						</noscript>
+						<script type="text/javascript">
+							var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://"
+									: " http://");
+							document
+									.write(unescape("%3Cscript src='"
+											+ _bdhmProtocol
+											+ "hm.baidu.com/h.js%3Fd25bd1db5bca2537d34deae7edca67d3' type='text/javascript'%3E%3C/script%3E"));
+						</script>
+					</div>
+
+
+				</div>
+			</div>
+	</form>
+
+</body>
+<!-- 广告位：漂浮_财经日历首页右侧_90*270 -->
+<script type="text/javascript">
+	BAIDU_CLB_fillSlot("432364");
+</script>
+<script type="text/javascript">
+	BAIDU_CLB_fillSlot("528546");
+</script>
+</html>

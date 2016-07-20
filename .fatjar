@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Sep 14 17:21:33 CST 2014
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=StatisticsAnalysis_fat.jar
+manifest.mergeall=true
+manifest.mainclass=com.app.StatisticsAnalysis
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|StatisticsAnalysis>~test/;<jar|jetty-ajp-8.1.4.v20120524.jar>;<jar|jetty-annotations-8.1.4.v20120524.jar>;<jar|jetty-client-8.1.4.v20120524.jar>;<jar|jetty-continuation-8.1.4.v20120524.jar>;<jar|jetty-deploy-8.1.4.v20120524.jar>;<jar|jetty-http-8.1.4.v20120524.jar>;<jar|jetty-io-8.1.4.v20120524.jar>;<jar|jetty-jmx-8.1.4.v20120524.jar>;<jar|jetty-jndi-8.1.4.v20120524.jar>;<jar|jetty-overlay-deployer-8.1.4.v20120524.jar>;<jar|jetty-plus-8.1.4.v20120524.jar>;<jar|jetty-policy-8.1.4.v20120524.jar>;<jar|jetty-rewrite-8.1.4.v20120524.jar>;<jar|jetty-security-8.1.4.v20120524.jar>;<jar|jetty-server-8.1.4.v20120524.jar>;<jar|jetty-servlet-8.1.4.v20120524.jar>;<jar|jetty-servlets-8.1.4.v20120524.jar>;<jar|jetty-util-8.1.4.v20120524.jar>;<jar|jetty-webapp-8.1.4.v20120524.jar>;<jar|jetty-websocket-8.1.4.v20120524.jar>;<jar|jetty-xml-8.1.4.v20120524.jar>;<jar|servlet-api-3.0.jar>;<jar|commons-httpclient-3.0-rc3.jar>
+includes=

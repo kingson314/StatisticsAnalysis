@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gbk"?>
+
+
+<ToolBar>
+	<btn>
+		<name>SystemLock</name>
+		<ico>SystemLock.gif</ico>
+		<action>com.app.AppFun.systemLock</action>
+	</btn>
+	<btn>
+		<name>SystemExit</name>
+		<ico>SystemExit.gif</ico>
+		<action>com.app.AppFun.systemClosing</action>
+	</btn>
+	<label>
+		<name>l0</name>
+		<ico></ico>
+		<action></action>
+	</label>
+	<btn>
+		<name>SystemParam</name>
+		<ico>SystemParam.gif</ico>
+		<action>com.app.AppFun.sysDialog</action>
+	</btn>
+	<btn>
+		<name>DbCon</name>
+		<ico>DbCon.gif</ico>
+		<action>com.app.AppFun.dbConnDialog</action>
+	</btn>
+	<btn>
+		<name>settings</name>
+		<ico>Settings.gif</ico>
+		<action>com.app.AppFun.settingsDialog</action>
+	</btn>
+	<label>
+		<name>l3</name>
+		<ico></ico>
+		<action></action>
+	</label>
+	<btn>
+		<name>About</name>
+		<ico>About.gif</ico>
+		<action>com.app.AppFun.aboutDialog</action>
+	</btn>
+</ToolBar>
