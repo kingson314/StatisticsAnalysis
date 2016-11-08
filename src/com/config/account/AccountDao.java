@@ -54,7 +54,7 @@ public class AccountDao {
 	public String[] getAccountArr() {
 		String[] idArr = null;
 		try {
-			String sql = "select '全部'name,0 ord from dual union select distinct name,1 ord from config_account order by ord";
+			String sql = "select distinct name,1 ord from config_account order by ord";
 			ArrayList<HashMap<String, String>> list = UtilSql.executeSql(con, sql, new Object[0]);
 			idArr = new String[list.size()];
 			for (int i = 0; i < list.size(); i++) {

@@ -139,7 +139,7 @@ public class EconomicNewsTab {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时段"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
 				cmbQueryTime.setSize(250, 24);

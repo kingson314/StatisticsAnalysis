@@ -5,5 +5,10 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
 	<classpathentry kind="lib" path="/Common/lib/jfreechart/jcommon-1.0.17.jar"/>
 	<classpathentry kind="lib" path="/Common/lib/jfreechart/jfreechart-1.0.14.jar"/>
+	<classpathentry kind="lib" path="/Common/lib/c3p0/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="/Common/lib/c3p0/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="/Common/lib/c3p0/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="/Common/lib/jdbc/classes12.jar"/>
+	<classpathentry kind="lib" path="/Common/lib/jdbc/sqljdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

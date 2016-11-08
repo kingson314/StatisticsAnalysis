@@ -74,7 +74,7 @@ public class EconomicIndicatorDao {
 
 	// public Vector<?> getModel(String country) {
 	// String sql =
-	// " select '' id,''indicator,-1 ord  from dual union select id,indicator ,ord  from economic_indicator  where country='"
+	// " select id,indicator ,ord  from economic_indicator  where country='"
 	// + country
 	// + "' and state=0 order by ord";
 	// List<HashMap<String, Object>> list = UtilSql.QueryM(con, sql);
@@ -109,7 +109,7 @@ public class EconomicIndicatorDao {
 	 * @author:fgq
 	 */
 	public String[] getIndicator(String country, int type) {
-		String sql = " select '' id,''indicator,-1 ord ,'高' importance from dual union select id,indicator ,ord,importance  from economic_indicator  where country='" + country
+		String sql = " select id,indicator ,ord,importance  from economic_indicator  where country='" + country
 				+ "' and state=0 and importance in ('中','高') order by importance,ord,indicator";
 		List<HashMap<String, Object>> list = UtilSql.QueryM(con, sql);
 		if (list == null)
@@ -130,7 +130,7 @@ public class EconomicIndicatorDao {
 
 	public List<HashMap<String, Object>> getCountryAndIndicatorId(String economic_data_indicator, int source) {
 		String sql = "";
-		String[] arrCountry = DictionaryDao.getInstance().getDicionaryArr("国家");
+		String[] arrCountry = DictionaryDao.getInstance().getDicionaryArr("COUNTRY");
 		String country = UtilFun.getCountry(economic_data_indicator, arrCountry);
 		if (source == 0) {// 汇通
 			sql = "select id,country,indicatorHt as indicator from economic_indicator where instr('" + economic_data_indicator + "',trim(indicatorHt))>0";

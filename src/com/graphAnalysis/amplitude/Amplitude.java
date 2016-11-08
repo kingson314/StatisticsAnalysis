@@ -170,7 +170,7 @@ public class Amplitude {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时段"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
 				cmbQueryTime.setSize(250, 24);
@@ -191,7 +191,7 @@ public class Amplitude {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("形态分类"));
+				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("ModalClassification"));
 				cmbType.setSize(120, 24);
 				cmbType.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbType.setMaximumSize(new java.awt.Dimension(120, 24));

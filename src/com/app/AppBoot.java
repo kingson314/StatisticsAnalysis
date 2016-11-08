@@ -167,11 +167,8 @@ public class AppBoot extends JWindow {
 
 	// 先连接一下，免的登录用时等待
 	public void tryConn() throws Exception {
-		String sql = "select * from dual ";
-		Connection con = UtilJDBCManager.getConnection(Const.DbName);
-		UtilSql.QueryA(con, sql);
-		sql = "select count(1) from settings ";
-		con = UtilJDBCManager.getConnection(AppCon.DbconApp);
+		String sql = "select count(1) from settings ";
+		Connection con = UtilJDBCManager.getConnection(AppCon.DbconApp);
 		UtilSql.queryForCount(con, sql, new Object[0]);
 	}
 

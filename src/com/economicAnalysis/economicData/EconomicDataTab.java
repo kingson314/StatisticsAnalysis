@@ -192,7 +192,7 @@ public class EconomicDataTab {
 				lQueryTime.setMaximumSize(new java.awt.Dimension(60, 17));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时间"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				cmbQueryTime.setEditable(true);
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
@@ -228,7 +228,7 @@ public class EconomicDataTab {
 				tbQuery.add(lCountry);
 			}
 			{
-				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("国家"));
+				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("COUNTRY"));
 				cmbCountry.setSize(120, 24);
 				cmbCountry.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.setMaximumSize(new java.awt.Dimension(120, 24));
@@ -270,7 +270,7 @@ public class EconomicDataTab {
 				tbQuery.add(lImportance);
 			}
 			{
-				cmbImportance = new SComboBox(DictionaryDao.getInstance().getDicionaryArr("重要性"));
+				cmbImportance = new SComboBox(DictionaryDao.getInstance().getDicionaryArr("Importance"));
 				cmbImportance.setEditable(true);
 				cmbImportance.setSize(80, 24);
 				cmbImportance.setMinimumSize(new java.awt.Dimension(80, 24));

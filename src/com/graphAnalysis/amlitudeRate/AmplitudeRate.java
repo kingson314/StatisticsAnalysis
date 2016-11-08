@@ -177,7 +177,7 @@ public class AmplitudeRate {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时段"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
 				cmbQueryTime.setSize(250, 24);
@@ -198,7 +198,7 @@ public class AmplitudeRate {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("形态分类"));
+				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("ModalClassification"));
 				cmbType.setSize(120, 24);
 				cmbType.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbType.setMaximumSize(new java.awt.Dimension(120, 24));
@@ -218,7 +218,7 @@ public class AmplitudeRate {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbRange = new SComboBox(DictionaryDao.getInstance().getDicionary("区间数组"));
+				cmbRange = new SComboBox(DictionaryDao.getInstance().getDicionary("ArrayRange"));
 				cmbRange.setSize(50, 17);
 				cmbRange.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbRange.setMaximumSize(new java.awt.Dimension(120, 24));

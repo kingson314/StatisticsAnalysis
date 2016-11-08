@@ -145,7 +145,7 @@ public class OrdersTab {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时段"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
 				cmbQueryTime.setSize(250, 24);
@@ -166,7 +166,7 @@ public class OrdersTab {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("订单类型"));
+				cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("OrderType"));
 				cmbType.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbType.setMaximumSize(new java.awt.Dimension(120, 24));
 				tbQuery.add(cmbType);

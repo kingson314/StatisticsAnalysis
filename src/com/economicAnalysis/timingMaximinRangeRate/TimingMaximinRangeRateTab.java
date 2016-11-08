@@ -87,7 +87,7 @@ public class TimingMaximinRangeRateTab {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("国家"));
+				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("COUNTRY"));
 				cmbCountry.setEditable(true);
 				cmbCountry.setSize(80, 24);
 				cmbCountry.setMinimumSize(new java.awt.Dimension(120, 24));
@@ -161,7 +161,7 @@ public class TimingMaximinRangeRateTab {
 				tbQuery.add(lImportance);
 			}
 			{
-				cmbImportance = new SComboBox(DictionaryDao.getInstance().getDicionaryArr("重要性"));
+				cmbImportance = new SComboBox(DictionaryDao.getInstance().getDicionaryArr("Importance"));
 				cmbImportance.setEditable(true);
 				cmbImportance.setSize(60, 24);
 				cmbImportance.setMinimumSize(new java.awt.Dimension(60, 24));
@@ -201,7 +201,7 @@ public class TimingMaximinRangeRateTab {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbRange = new SComboBox(DictionaryDao.getInstance().getDicionary("区间数组明细"));
+				cmbRange = new SComboBox(DictionaryDao.getInstance().getDicionary("ArrayRange"));
 				cmbRange.setEditable(true);
 				cmbRange.setSize(50, 17);
 				cmbRange.setMinimumSize(new java.awt.Dimension(120, 24));

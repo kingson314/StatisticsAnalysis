@@ -190,7 +190,7 @@ public class TimingMaximinTab30 {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时间"));
+				cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 				cmbQueryTime.setEditable(true);
 				tbQuery.add(cmbQueryTime);
 				cmbQueryTime.setSelectedIndex(0);
@@ -212,7 +212,7 @@ public class TimingMaximinTab30 {
 				tbQuery.addSeparator(new Dimension(2, 30));
 			}
 			{
-				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("国家"));
+				cmbCountry = new SComboBox(DictionaryDao.getInstance().getDicionary("COUNTRY"));
 				cmbCountry.setEditable(true);
 				cmbCountry.setSize(120, 24);
 				cmbCountry.setMinimumSize(new java.awt.Dimension(120, 24));

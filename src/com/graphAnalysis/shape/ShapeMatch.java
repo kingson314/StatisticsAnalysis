@@ -126,7 +126,7 @@ public class ShapeMatch {
 			lQueryTime.setBounds(5, 97, 60, 17);
 		}
 		{
-			cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("查询时段"));
+			cmbQueryTime = new SComboBox(DictionaryDao.getInstance().getDicionary("QueryTime"));
 			pnlQuery.add(cmbQueryTime);
 			cmbQueryTime.setSelectedIndex(0);
 			cmbQueryTime.setBounds(60, 91, 150, 24);
@@ -137,7 +137,7 @@ public class ShapeMatch {
 			pnlQuery.add(lType);
 		}
 		{
-			cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("形态分类"));
+			cmbType = new SComboBox(DictionaryDao.getInstance().getDicionary("ModalClassification"));
 			cmbType.setBounds(60, 121, 150, 24);
 			pnlQuery.add(cmbType);
 		}
