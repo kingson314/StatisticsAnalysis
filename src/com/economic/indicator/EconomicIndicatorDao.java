@@ -109,7 +109,7 @@ public class EconomicIndicatorDao {
 	 * @author:fgq
 	 */
 	public String[] getIndicator(String country, int type) {
-		String sql = " select id,indicator ,ord,importance  from economic_indicator  where country='" + country
+		String sql = " select ''id,''indicator,-1 ord ,-1 importance from dual union all  select id,indicator ,ord,importance  from economic_indicator  where country='" + country
 				+ "' and state=0 and importance in ('中','高') order by importance,ord,indicator";
 		List<HashMap<String, Object>> list = UtilSql.QueryM(con, sql);
 		if (list == null)

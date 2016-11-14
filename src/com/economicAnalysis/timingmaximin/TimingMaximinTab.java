@@ -343,6 +343,10 @@ public class TimingMaximinTab {
 			ShowMsg.showWarn("请选择指标!");
 			return;
 		}
+		if ("".equals(UtilString.isNil(cmbRange.getSelectedItem()))) {
+			ShowMsg.showWarn("请选择极值范围!");
+			return;
+		}
 		Map<String, String> mapParams = new HashMap<String, String>();
 		mapParams.put("begDate", txtBegDate.getText());
 		mapParams.put("endDate", txtEndDate.getText());

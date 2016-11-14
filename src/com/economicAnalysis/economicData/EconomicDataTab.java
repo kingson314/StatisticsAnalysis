@@ -203,20 +203,20 @@ public class EconomicDataTab {
 			{
 				tbQuery.addSeparator(new Dimension(5, 30));
 			}
-			{
-				lScource = new SLabel("来源");
-				lScource.setSize(40, 17);
-				lScource.setMinimumSize(new java.awt.Dimension(40, 17));
-				lScource.setMaximumSize(new java.awt.Dimension(40, 17));
-				tbQuery.add(lScource);
-			}
-			{
-				cmbSource = new SComboBox(Const.EconomicDataSource);
-				cmbSource.setSize(120, 24);
-				cmbSource.setMinimumSize(new java.awt.Dimension(120, 24));
-				cmbSource.setMaximumSize(new java.awt.Dimension(120, 24));
-				tbQuery.add(cmbSource);
-			}
+//			{
+//				lScource = new SLabel("来源");
+//				lScource.setSize(40, 17);
+//				lScource.setMinimumSize(new java.awt.Dimension(40, 17));
+//				lScource.setMaximumSize(new java.awt.Dimension(40, 17));
+//				tbQuery.add(lScource);
+//			}
+//			{
+//				cmbSource = new SComboBox(Const.EconomicDataSource);
+//				cmbSource.setSize(120, 24);
+//				cmbSource.setMinimumSize(new java.awt.Dimension(120, 24));
+//				cmbSource.setMaximumSize(new java.awt.Dimension(120, 24));
+//				tbQuery.add(cmbSource);
+//			}
 			{
 				tbQuery.addSeparator(new Dimension(5, 30));
 			}
@@ -234,7 +234,9 @@ public class EconomicDataTab {
 				cmbCountry.setMaximumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.addItemListener(new ItemListener() {
 					public void itemStateChanged(ItemEvent e) {
-						ComboBoxModel comboBoxModel = new DefaultComboBoxModel(EconomicIndicatorDao.getInstance().getIndicatorName(e.getItem().toString()));
+						String selected=cmbCountry.getSelectedItem().toString();
+						if("".equals(selected))return;
+						ComboBoxModel comboBoxModel = new DefaultComboBoxModel(EconomicIndicatorDao.getInstance().getIndicatorName(selected));
 						cmbIndicator.setModel(comboBoxModel);
 					}
 				});
@@ -389,17 +391,17 @@ public class EconomicDataTab {
 					System.out.println(UtilConver.dateToStr(Const.fm_HHmmss) + "到达最近的发布时间：" + listUnPublisTimeFh.get(0) + ",执行刷新");
 				}
 			}
-			beginSql = "select  a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a,economic_indicator b where a.indicatorId=b.id(+) and  publishdate='"
+			beginSql = "select  a.*, date_format(a.ModifyDate, '%H%m%s') modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a left join economic_indicator b on a.indicatorId=b.id where  publishdate='"
 					+ UtilConver.dateToStr("yyyy-MM-dd") + "'";
 		} else {
 			String country = cmbCountry.getSelectedItem().toString();
 			String begDate = UtilString.isNil(txtBegDate.getText());
 			String endDate = UtilString.isNil(txtEndDate.getText());
 			if ("全部".equals(country)) {
-				beginSql = "select   a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a,economic_indicator b where a.indicatorId=b.id(+) and   publishdate >='"
+				beginSql = "select   a.*, date_format(a.ModifyDate, '%H%m%s')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a left join economic_indicator b on a.indicatorId=b.id where   publishdate >='"
 						+ begDate + "' and publishdate <='" + endDate + "'";
 			} else {
-				beginSql = "select   a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a,economic_indicator b where a.indicatorId=b.id(+) and  a.country like'%"
+				beginSql = "select   a.*, date_format(a.ModifyDate, '%H%m%s')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a  left join  economic_indicator b on a.indicatorId=b.id where  a.country like'%"
 						+ country + "%' and publishdate >='" + begDate + "' and publishdate <='" + endDate + "'";
 			}
 			String queryTimes = cmbQueryTime.getSelectedItem().toString();
@@ -414,10 +416,8 @@ public class EconomicDataTab {
 			if (!"".equals(UtilString.isNil(indicator))) {
 				beginSql += " and a.indicator like '%" + indicator + "%' ";
 			}
-			beginSql += "  and a.source = " + Const.EconomicDataSourceKey[cmbSource.getSelectedIndex()];
-
 		}
-		String groupSql = " order by publishdate desc ,publishTime asc,a.country,decode(a.importance,'高',0,'中',1,'低',2,100),a.indicatorId,b.indicator";
+		String groupSql = " order by publishdate desc ,publishTime asc,a.importance,a.indicatorId,b.indicator";
 		String sql = beginSql + groupSql;
 		{
 			economicDataTable = new EconomicDataTable(false, isAuto, sql).getJtable();

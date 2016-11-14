@@ -540,15 +540,15 @@ public class KLineSimulateDialog extends SDialog {
 			begDate = begDateTime.substring(0, 8);
 			insertlSqlArr[i * 2] = "insert into " + beanKLine.getTableName() + "(dateserver,timeserver,datelocal,timelocal,open,close,high,low,ma5,ma20,ma60,kdj,volume) "
 					+ "select dateserver,timeserver,datelocal,timelocal,open,close,high,low,ma5,ma20,ma60,kdj,volume  from price_" + beanKLine.getSymbol() + beanKLine.getPeriod()
-					+ "   where " + Const.DateType + " >= '" + begDate + "' and " + Const.DateType + "<='" + endDate + "' and " + Const.DateType + "||' '||" + Const.TimeType + " >= '"
-					+ begDateTime + "' and  " + Const.DateType + "||' '||" + Const.TimeType + "<='" + endDateTime + "'";
+					+ "   where " + Const.DateType + " >= '" + begDate + "' and " + Const.DateType + "<='" + endDate + "' and concat(" + Const.DateType + ",' '," + Const.TimeType + ") >= '"
+					+ begDateTime + "' and  concat(" + Const.DateType + ",' '," + Const.TimeType + ")<='" + endDateTime + "'";
 
 			insertlSqlArr[i * 2 + 1] = "insert into "
 					+ beanKLine.getTableName()
 					+ "_detail(dateserver,timeserver,datelocal,timelocal,open,close,high,low,ma5,ma20,ma60,kdj,volume) "
 					+ "select dateserver,timeserver,datelocal,timelocal,max(open),max(close),max(high),max(low),max(ma5),max(ma20),max(ma60),max(kdj),max(volume)  from price_"
-					+ beanKLine.getSymbol() + beanKLine.getPeriod() + "  where " + Const.DateType + " >= '" + begDate + "' and " + Const.DateType + "<='" + endDate + "' and "
-					+ Const.DateType + "||' '||" + Const.TimeType + " >= '" + begDateTime + "' and  " + Const.DateType + "||' '||" + Const.TimeType + "<='" + endDateTime
+					+ beanKLine.getSymbol() + beanKLine.getPeriod() + "  where " + Const.DateType + " >= '" + begDate + "' and " + Const.DateType + "<='" + endDate + "' and concat("
+					+ Const.DateType + ",' '," + Const.TimeType + ") >= '" + begDateTime + "' and  concat(" + Const.DateType + ",' '," + Const.TimeType + ")<='" + endDateTime
 					+ "' group by dateserver,timeserver,datelocal,timelocal";
 			System.out.println(deleteSqlArr[i * 2]);
 			System.out.println(deleteSqlArr[i * 2 + 1]);

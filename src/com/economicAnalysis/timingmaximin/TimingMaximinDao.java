@@ -93,7 +93,7 @@ public class TimingMaximinDao {
 					+ "'  "
 					+ "    and b.indicatorId ='"
 					+ indicatorId + "' " + "    and b.publishDate between '" + begDate + "' and  '" + endDate + "'  " + "    and maximintype = 0  "// --'最高价'
-					+ " ) " + "group by indicatorid,publishDate, publishTime, country, importance " + "order by publishDate desc, publishTime asc";
+					+ " )a " + "group by indicatorid,publishDate, publishTime, country, importance " + "order by publishDate desc, publishTime asc";
 			sm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			System.out.println(sql);
 			rs = sm.executeQuery(sql);
@@ -142,7 +142,7 @@ public class TimingMaximinDao {
 			String symbol = mapParams.get("symbol");
 			String indicatorId = mapParams.get("indicatorId");
 			// 最大最小值
-			String sql = "select  decode(a.maximinType,0,'最大值',1,'最小值') TYPE,a.*,b.*  from sa_timingMaximin a,economic_data b where  a.economicDataId=b.id and " + "   a.symbol='" + symbol + "'  and b.indicatorId='"
+			String sql = "select  case a.maximinType when  0 then  '最大值'  when 1 then  '最小值' end TYPE,a.*,b.*  from sa_timingMaximin a,economic_data b where  a.economicDataId=b.id and " + "   a.symbol='" + symbol + "'  and b.indicatorId='"
 					+ indicatorId + "'   and b.publishDate between '" + begDate + "' and '" + endDate + "'   order by b.publishDate desc,b.publishTime asc, a.maximinType";
 			String field = "";
 			if ("before".equalsIgnoreCase(beforeAfter)) {
