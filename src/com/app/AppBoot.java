@@ -3,11 +3,14 @@ package com.app;
 import java.awt.BorderLayout;
 import java.awt.Toolkit;
 import java.sql.Connection;
+
 import javax.swing.JProgressBar;
 import javax.swing.JWindow;
+
 import app.AppCon;
 import app.AppConfig;
 import app.AppLookAndFeel;
+
 import common.component.SLabel;
 import common.component.SSplitPane;
 import common.component.ShowMsg;
@@ -15,7 +18,7 @@ import common.util.jdbc.UtilJDBCManager;
 import common.util.jdbc.UtilSql;
 import common.util.log.UtilLog;
 import common.util.string.UtilString;
-import consts.Const;
+
 import consts.ImageContext;
 
 /**

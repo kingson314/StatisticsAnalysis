@@ -359,8 +359,7 @@ public class EconomicDataTable {
 									EconomicDataDao.getInstance().match(
 											jtable.getValueAt(jtable.getSelectedRows()[i], 0).toString(),
 											jtable.getValueAt(jtable.getSelectedRows()[i], 8).toString(),
-											Integer.valueOf(UtilString.iif("".equals(UtilString.isNil(jtable.getValueAt(jtable.getSelectedRows()[i],
-													2))), "-1", UtilString.isNil(jtable.getValueAt(jtable.getSelectedRows()[i], 2)))));
+											jtable.getValueAt(jtable.getSelectedRows()[i], 7).toString());
 								}
 								EconomicDataTab.getInstance().query(false);
 							} catch (Exception e) {

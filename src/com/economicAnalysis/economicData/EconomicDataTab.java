@@ -9,6 +9,7 @@ import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -17,6 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTable;
 import javax.swing.JToolBar;
+
 import com.economic.indicator.EconomicIndicatorDao;
 import com.economic.news.EconomicNewsTable;
 import common.component.SButton;
@@ -30,6 +32,7 @@ import common.timeSchedule.TimeScheduleTask;
 import common.util.collection.UtilCollection;
 import common.util.conver.UtilConver;
 import common.util.string.UtilString;
+
 import config.dictionary.DictionaryDao;
 import consts.Const;
 import consts.ImageContext;
@@ -65,8 +68,6 @@ public class EconomicDataTab {
 	private JTable economicDataTable;
 	// private JTable economicDataDateTimeTablel;
 
-	private SLabel lScource;
-	private SComboBox cmbSource;
 	// 福汇最近未发布时间
 	public List<String> listUnPublisTimeFh = new ArrayList<String>();
 	public SButton btnAuto;
@@ -371,7 +372,6 @@ public class EconomicDataTab {
 		if (!"".equals(importance)) {
 			sbSql.append(" and a.importance>='" + importance + "'");
 		}
-		sbSql.append("  and a.source = " + Const.EconomicDataSourceKey[cmbSource.getSelectedIndex()]);
 		sbSql.append(" order by publishdate desc ,publishTime asc,a.country,decode(a.importance,'高',0,'中',1,'低',2,100),a.indicatorId,b.indicator");
 		{
 			economicDataTable = new EconomicDataTable(false, false, sbSql.toString()).getJtable();
