@@ -157,7 +157,7 @@ public class EconomicIndicatorTab {
 	}
 
 	private void updateImportance() {
-		String sql = "update economic_indicator a set a.importance=(select decode(max(decode(importance,'高',3,'中',2,'低',1,0)),3,'高',2,'中',1,'低') "
+		String sql = "update economic_indicator a set a.importance=(select importance "
 				+ "from economic_data b  where source=1 and indicatorid is not null  and a.id=b.indicatorid group by indicatorid)  ";
 		EconomicIndicatorDao.getInstance().executeUpdate(sql);
 	}

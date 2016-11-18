@@ -40,6 +40,7 @@ public class KLineSimulate {
 	private KLineSimulate() {
 		tb = new STabbedPane();
 		listBeanKLine = new ArrayList<BeanKLine>();
+		listBeanKLine.clear();
 		timeSchedule = new TimeSchedule(new KlineSimulateTask(), 1000);
 		scrl = new SScrollPane[Const.PeriodArr.length];
 		spltCompare = new SSplitPane(1, 0.4188, false);
@@ -112,8 +113,8 @@ public class KLineSimulate {
 					String sTime = listBeanKLine.get(0).getSTime();
 
 					String nextDateTime = UtilDate.addSecond(sDate + " " + sTime, seconds, Const.fm_yyyyMMdd_HHmmss);
-					String nextDate = nextDateTime.substring(0, 10);
-					String nextTime = nextDateTime.substring(11);
+					String nextDate = nextDateTime.substring(0, 8);
+					String nextTime = nextDateTime.substring(9);
 					String endDateTimeSimulate = "";
 					for (int i = 0; i < listBeanKLine.size(); i++) {
 						listBeanKLine.get(i).setSDate(nextDate);

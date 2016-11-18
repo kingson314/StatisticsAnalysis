@@ -440,6 +440,10 @@ public class KLineSimulateDialog extends SDialog {
 
 	private void btnReady() {
 		try {
+			if("全部".equals(UtilString.isNil(cmbSymbol.getSelectedItem()))){
+				ShowMsg.showMsg("请选择货币！");
+				return;
+			}
 			KLineSimulate kLineSimulate = KLineSimulate.getInstance();
 			TimeSchedule timeSchedule = kLineSimulate.getTimeSchedule();
 			timeSchedule.stop();

@@ -206,11 +206,11 @@ public class EconomicDataTable {
 			}
 
 		};
-		jtable.selectAll();
-		for (int j = 0; j < this.jtable.getColumnCount(); j++) {
-			jtable.getColumn(columnName.get(j)).setCellRenderer(rowRender);
-		}
-		jtable.clearSelection();
+//		jtable.selectAll();
+//		for (int j = 0; j < this.jtable.getColumnCount(); j++) {
+//			jtable.getColumn(columnName.get(j)).setCellRenderer(rowRender);
+//		}
+//		jtable.clearSelection();
 	}
 
 	private void mouseDoubleClick() {

@@ -360,7 +360,7 @@ public class TimingValueTab {
 		String publishTime = UtilCollection.isNilMap(mapParam, "publishTime");
 		String source = UtilCollection.isNilMap(mapParam, "source");
 		StringBuilder sbSql = new StringBuilder(
-				"select  a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport,a.source from economic_data a,economic_indicator b where a.indicatorId=b.id(+) ");
+				"select  a.*,DATE_FORMAT (a.ModifyDate,'%H%i%S')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport,a.source from economic_data a left join economic_indicator b on a.indicatorId=b.id ");
 		if (!"".equals(publishDate)) {
 			sbSql.append(" and a.publishDate='" + publishDate + "'");
 		}

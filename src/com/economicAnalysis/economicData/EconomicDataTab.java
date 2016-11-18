@@ -359,7 +359,7 @@ public class EconomicDataTab {
 		String publishTime = UtilCollection.isNilMap(mapParam, "publishTime");
 		String importance = UtilCollection.isNilMap(mapParam, "importance");
 		StringBuilder sbSql = new StringBuilder(
-				"select  a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a,economic_indicator b where a.indicatorId=b.id(+) ");
+				"select  a.*,DATE_FORMAT(a.ModifyDate,'%H%i%S')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport from economic_data a left join economic_indicator b on a.indicatorId=b.id where 1=1 ");
 		if (!"".equals(indicatorId)) {
 			sbSql.append(" and a.indicatorId='" + indicatorId + "'");
 		}
@@ -372,7 +372,7 @@ public class EconomicDataTab {
 		if (!"".equals(importance)) {
 			sbSql.append(" and a.importance>='" + importance + "'");
 		}
-		sbSql.append(" order by publishdate desc ,publishTime asc,a.country,decode(a.importance,'高',0,'中',1,'低',2,100),a.indicatorId,b.indicator");
+		sbSql.append(" order by publishdate desc ,publishTime asc,a.country,a.importance,a.indicatorId,b.indicator");
 		{
 			economicDataTable = new EconomicDataTable(false, false, sbSql.toString()).getJtable();
 			scrlEconomicDataTablel.setViewportView(economicDataTable);
@@ -414,7 +414,7 @@ public class EconomicDataTab {
 			}
 			String indicator = cmbIndicator.getSelectedItem().toString();
 			if (!"".equals(UtilString.isNil(indicator))) {
-				beginSql += " and a.indicator like '%" + indicator + "%' ";
+				beginSql += " and b.indicator like '%" + indicator + "%' ";
 			}
 		}
 		String groupSql = " order by publishdate desc ,publishTime asc,a.importance,a.indicatorId,b.indicator";

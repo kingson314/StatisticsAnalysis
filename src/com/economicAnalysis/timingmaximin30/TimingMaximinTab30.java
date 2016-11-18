@@ -365,7 +365,7 @@ public class TimingMaximinTab30 {
 		String publishTime = UtilCollection.isNilMap(mapParam, "publishTime");
 		String source = UtilCollection.isNilMap(mapParam, "source");
 		StringBuilder sbSql = new StringBuilder(
-				"select  a.*,to_char(a.ModifyDate,'hh24miss')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport,a.source from economic_data a,economic_indicator b where a.indicatorId=b.id(+) ");
+				"select  a.*,DATE_FORMAT(a.ModifyDate,'%H%i%S')modifyTime,b.indicator as indicatorName,b.indicatoreffect,b.matchrate,b.analysisreport,a.source from economic_data a left join economic_indicator b on a.indicatorId=b.id  where 1=1 ");
 		if (!"".equals(publishDate)) {
 			sbSql.append(" and a.publishDate='" + publishDate + "'");
 		}
@@ -373,7 +373,7 @@ public class TimingMaximinTab30 {
 			sbSql.append(" and a.publishTime>='" + publishTime + "'");
 		}
 		sbSql.append("  and a.source = " + source);
-		sbSql.append(" order by publishdate desc ,publishTime asc,a.country,decode(a.importance,'高',0,'中',1,'低',2,100),a.indicatorId,b.indicator");
+		sbSql.append(" order by publishdate desc ,publishTime asc,a.country,a.importance,a.indicatorId,b.indicator");
 		{
 			EconomicDataTable economicDataTable = new EconomicDataTable(true, false, sbSql.toString());
 			economicDataTable.setRowRender(publishDate, publishTime, 4, 5);
