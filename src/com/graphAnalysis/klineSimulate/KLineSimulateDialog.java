@@ -127,6 +127,7 @@ public class KLineSimulateDialog extends SDialog {
 				cmbSymbol = new SComboBox(Const.SymbolArr);
 				getContentPane().add(cmbSymbol);
 				cmbSymbol.setBounds(94, 2 + y, 90, 21);
+				cmbSymbol.setSelectedIndex(1);
 			}
 			{
 				lBars = new SLabel("K线数量");

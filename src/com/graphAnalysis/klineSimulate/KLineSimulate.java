@@ -43,7 +43,7 @@ public class KLineSimulate {
 		listBeanKLine.clear();
 		timeSchedule = new TimeSchedule(new KlineSimulateTask(), 1000);
 		scrl = new SScrollPane[Const.PeriodArr.length];
-		spltCompare = new SSplitPane(1, 0.4188, false);
+		spltCompare = new SSplitPane(1, 0.5, false);
 	}
 
 	public static KLineSimulate getInstance() {
