@@ -111,7 +111,7 @@ public class KLineSimulateDialog extends SDialog {
 		try {
 			this.setSize(530, 350);
 			this.setIconImage(Toolkit.getDefaultToolkit().getImage(ImageContext.DialogManuExecTaskParam));
-			this.setModal(true);
+			this.setModal(false);
 			this.setAlwaysOnTop(false);
 			int w = (Toolkit.getDefaultToolkit().getScreenSize().width - this.getWidth()) / 2;
 			int h = (Toolkit.getDefaultToolkit().getScreenSize().height - this.getHeight()) / 2;
