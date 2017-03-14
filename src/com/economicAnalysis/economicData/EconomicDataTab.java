@@ -234,6 +234,7 @@ public class EconomicDataTab {
 				cmbCountry.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.setMaximumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.addItemListener(new ItemListener() {
+					@SuppressWarnings("unchecked")
 					public void itemStateChanged(ItemEvent e) {
 						String selected=cmbCountry.getSelectedItem().toString();
 						if("".equals(selected))return;

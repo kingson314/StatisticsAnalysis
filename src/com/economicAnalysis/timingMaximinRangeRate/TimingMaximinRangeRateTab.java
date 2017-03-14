@@ -94,6 +94,7 @@ public class TimingMaximinRangeRateTab {
 				cmbCountry.setMaximumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.addItemListener(new ItemListener() {
 
+					@SuppressWarnings("unchecked")
 					public void itemStateChanged(ItemEvent e) {
 						indicatorNameArr = EconomicIndicatorDao.getInstance().getIndicatorName(e.getItem().toString());
 						indicatorIdArr = EconomicIndicatorDao.getInstance().getIndicatorId(e.getItem().toString());

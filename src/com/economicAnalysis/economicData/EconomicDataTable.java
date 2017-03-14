@@ -173,6 +173,7 @@ public class EconomicDataTable {
 				listEquals.add(i);
 			}
 		}
+		@SuppressWarnings("unused")
 		DefaultTableCellRenderer rowRender = new DefaultTableCellRenderer() {
 			private static final long serialVersionUID = 1L;
 

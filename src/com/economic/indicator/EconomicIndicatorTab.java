@@ -14,12 +14,12 @@ import javax.swing.JSplitPane;
 import javax.swing.JTable;
 import javax.swing.JToolBar;
 
-
 import common.component.SButton;
 import common.component.SComboBox;
 import common.component.SLabel;
 import common.component.SSplitPane;
 import common.util.string.UtilString;
+
 import config.dictionary.DictionaryDao;
 import consts.ImageContext;
 
@@ -79,6 +79,7 @@ public class EconomicIndicatorTab {
 				cmbCountry.setMinimumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.setMaximumSize(new java.awt.Dimension(120, 24));
 				cmbCountry.addItemListener(new ItemListener() {
+					@SuppressWarnings("unchecked")
 					public void itemStateChanged(ItemEvent e) {
 						ComboBoxModel comboBoxModel = new DefaultComboBoxModel(EconomicIndicatorDao.getInstance().getIndicatorName(e.getItem().toString()));
 						cmbIndicator.setModel(comboBoxModel);
