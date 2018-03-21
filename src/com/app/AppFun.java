@@ -92,12 +92,12 @@ public class AppFun {
 	public boolean isRunning(String applicationName) {
 		boolean rv = false;
 		try {
-			String path = System.getProperty("user.dir") + "\\temp";
+			String path = System.getProperty("user.dir") + "/temp";
 			File dir = new File(path);
 			if (!dir.exists()) {
 				dir.mkdirs();
 			}
-			RandomAccessFile fis = new RandomAccessFile(path + "\\" + applicationName + ".lock", "rw");
+			RandomAccessFile fis = new RandomAccessFile(path + "/" + applicationName + ".lock", "rw");
 			FileChannel lockfc = fis.getChannel();
 			FileLock flock = lockfc.tryLock();
 			if (flock == null) {

@@ -82,7 +82,7 @@ public class AppTableView {
 //				tab.addTab(title, ImageContext.TabTask, getMainImage(), title, false);
 //				tab.setPersistTab(new String[] { "首页" });
 				title = "经济数据分析";
-				tab.addTab(title, ImageContext.TabTask, com.economicAnalysis.economicData.EconomicDataTab.getInstance().getSplMain(), title, false);
+				//tab.addTab(title, ImageContext.TabTask, com.economicAnalysis.economicData.EconomicDataTab.getInstance().getSplMain(), title, false);
 			}
 			tab.setSelected(title);
 		} else {

@@ -2,11 +2,12 @@
 	    <!-- 程序启动选项 -->
 	 <boot>
 		    <!-- 程序使用的数据库 -->
-		 <dbApp>使用默认的数据库</dbApp>
+		 <!-- <dbApp>使用默认的数据库 AppCon</dbApp> -->
+		 <dbApp>app</dbApp>
 		    <!-- 当前执行日期数据库 -->
-		 <dbNowDate>mdb</dbNowDate>
+		 <dbNowDate>app</dbNowDate>
 		    <!-- 节假日数据库 -->
-		 <dbDateType>mdb</dbDateType>
+		 <dbDateType>app</dbDateType>
 		    <!-- 是否自动启动jetty -->
 		 <startJetty>false</startJetty>
 		    <!-- 是否使用登陆、锁屏 -->
@@ -19,7 +20,15 @@
 		 <jettyPort>9999</jettyPort>
 	 </jetty>
 
-	    <!-- db  -->
+	 <!-- db  -->
+	 <db>
+		 <id>app</id>
+		 <type>mysql</type>
+		 <class>com.mysql.jdbc.Driver</class>
+		 <link>jdbc:mysql://127.0.0.1:3306/app?useUnicode=true&amp;characterEncoding=UTF-8</link>
+		 <username>root</username>
+		 <password>G^HYfL5dwaln2.,e</password>
+	 </db>
 	    <!-- 程序使用的多个可选数据库配置，供启动选项选择  -->
 	 <db>
 		    <!-- 数据库标志，在启动选项中使用 -->
@@ -43,7 +52,7 @@
 		 <link>
 			<![CDATA[
 			jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=
-			E:\360云盘\百度云\Projects\StatisticsAnalysis\db\db.mdb
+			E:\360云盘\百度云\Projects\TaskScheduling\db\db.mdb;
 			]]>
 		</link>
 		 <username/>
@@ -63,24 +72,24 @@
 	    <!-- 程序部分可配置参数  -->
 	 <App>
 		    <!-- 程序标题  -->
-		 <appTitle>StatisticsAnalysis</appTitle>
+		 <appTitle>TaskScheduler</appTitle>
 		    <!-- 程序版本(此参数设置会启动程序的首次自动更新功能) -->
 		 <appVersion>3.0.0</appVersion>
 		    <!-- 程序发布日期 -->
-		 <appPublishDate>2013-01-01</appPublishDate>
+		 <appPublishDate>2012-10-01</appPublishDate>
 		    <!-- 程序的专利说明 -->
 		 <appCopyRight>
-			<![CDATA[ (c) Copyright fengGuoqu 2012 - 2020.All rights reserved.
- 	mail 273394694@qq.com]]>
+			<![CDATA[ (c) Copyright efund 2012 - 2020.All rights reserved.
+	    Visit http://www.efunds.com.cn]]>
 		</appCopyRight>
 		    <!-- 程序使用的皮肤主题 -->
-		  <appLookAndFeel>默认风格</appLookAndFeel>
+		 <appLookAndFeel>默认风格</appLookAndFeel>
 		    <!-- 程序登陆、锁屏用户，此用户固定，暂不扩展  -->
 		 <appUserName>Admin</appUserName>
 		    <!-- 程序登陆、锁屏对应的密码，密文可以用程序用的加密工具生成，此密码默认为888 -->
-		 <appPassword>9e48a3e9ec890180e81d27d1404de79f</appPassword>
+		 <appPassword>kingson</appPassword>
 		    <!-- 程序锁屏快捷键 -->
-		 <appLockShortKey>CTRL + F12</appLockShortKey>
+		 <appLockShortKey>F12</appLockShortKey>
 		    <!-- 程序编辑框撤销做捷键 -->
 		 <appUnDoShortKey>CTRL + Z</appUnDoShortKey>
 		    <!-- 程序锁编辑框重做捷键 -->
